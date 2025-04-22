@@ -28,7 +28,7 @@ public class TestLeavePage extends DriverSetUp {
     public void assignLeaveWithValidData() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         // Employee Name
-        leavePage.writeOneElement(leavePage.empName_locator, "Harish Baskar B");
+        leavePage.writeOneElement(leavePage.empName_locator, "Timothy Lewis Amiano");
         Thread.sleep(2000);
         actions.moveToElement(leavePage.getElement(leavePage.empName_locator)).click().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
 

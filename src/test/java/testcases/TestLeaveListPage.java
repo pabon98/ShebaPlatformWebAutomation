@@ -29,7 +29,7 @@ public class TestLeaveListPage extends DriverSetUp {
     @Test
     public void searchLeaveList() throws InterruptedException {
         // Emp name
-        leaveListPage.writeOneElement(leaveListPage.Emp_name_locator, "Peter Mac Anderson");
+        leaveListPage.writeOneElement(leaveListPage.Emp_name_locator, "Timothy Lewis Amiano");
         Actions leaveEmployeeAction = new Actions(getDriver());
         Thread.sleep(2000);
         leaveEmployeeAction.moveToElement(leaveListPage.getElement(leaveListPage.Emp_name_locator)).click().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
