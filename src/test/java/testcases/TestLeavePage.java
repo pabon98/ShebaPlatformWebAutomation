@@ -17,7 +17,6 @@ import java.util.List;
 
 public class TestLeavePage extends DriverSetUp {
     LeavePage leavePage = new LeavePage();
-    LoginPage loginPage = new LoginPage();
     @Test
     public void setUpClass()  {
         leavePage.gotoLeavePage();
@@ -29,7 +28,7 @@ public class TestLeavePage extends DriverSetUp {
     public void assignLeaveWithValidData() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         // Employee Name
-        leavePage.writeOneElement(leavePage.empName_locator, "Peter Mac Anderson");
+        leavePage.writeOneElement(leavePage.empName_locator, "Harish Baskar B");
         Thread.sleep(2000);
         actions.moveToElement(leavePage.getElement(leavePage.empName_locator)).click().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
 
@@ -48,7 +47,7 @@ public class TestLeavePage extends DriverSetUp {
         }
 
         // FROM DATE
-         leavePage.writeOneElement(leavePage.fromDate_locator, "2025-24-04");
+         leavePage.writeOneElement(leavePage.fromDate_locator, "2025-25-04");
 
         //TO DATE
        // leavePage.writeOneElement(leavePage.toDate_Locator, "2025-28-04");
@@ -56,7 +55,7 @@ public class TestLeavePage extends DriverSetUp {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
 
         // TO DATE
-        js.executeScript("arguments[0].value='2025-26-04';", getDriver().findElement(leavePage.toDate_Locator));
+        js.executeScript("arguments[0].value='2025-28-04';", getDriver().findElement(leavePage.toDate_Locator));
         Thread.sleep(2000);
 
         // COMMENT BOX
@@ -72,11 +71,5 @@ public class TestLeavePage extends DriverSetUp {
 
 
     }
-    @AfterClass
-    public void logOutUser() throws InterruptedException {
-        loginPage.clickOneElement(loginPage.logout_arrowDown_icon);
-        loginPage.clickOneElement(loginPage.logout_locator);
-        Thread.sleep(2000);
 
-    }
 }
