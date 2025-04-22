@@ -21,8 +21,8 @@ public class TestLoginPage extends DriverSetUp {
     loginPage.writeOneElement(loginPage.userName_locator, loginPage.userName);
     loginPage.writeOneElement(loginPage.passWord_locator, loginPage.password);
     loginPage.clickOneElement(loginPage.login_locator);
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-    wait.until(ExpectedConditions.textToBePresentInElementLocated(loginPage.dashboard_userName_locator, loginPage.dashboard_username ));
+    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+    wait.until(ExpectedConditions.textToBePresentInElementLocated(loginPage.dashboard_text_locator, loginPage.dashboard_text ));
 
     }
 }

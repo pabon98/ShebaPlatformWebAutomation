@@ -9,8 +9,10 @@ public class LoginPage extends BasePage{
  public By userName_locator = By.xpath("//input[@placeholder='Username']");
  public By passWord_locator = By.xpath("//input[@placeholder='Password']");
  public By login_locator = By.cssSelector("button[type='submit']");
- public By dashboard_userName_locator = By.xpath("//p[@class='oxd-userdropdown-name']");
- public String dashboard_username = "Arthur Ghamboyan";
+ public By dashboard_text_locator = By.xpath("//a[@class='oxd-main-menu-item active']");
+ public String dashboard_text = "Dashboard";
+ public By logout_locator = By.xpath("//a[normalize-space()='Logout']");
+ public By logout_arrowDown_icon = By.cssSelector(".oxd-icon.bi-caret-down-fill.oxd-userdropdown-icon");
 
 
     public void navigateToLoginPage(){
